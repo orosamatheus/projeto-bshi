@@ -1,16 +1,22 @@
 import React from 'react'
+import "./styles.scss"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import arrow from "../../assets/arrow.svg"
+import logoBackground from "../../assets/logoBackground.svg"
 
-library.add(fas)
 
-export default function Home(){
-    return(
-        <div>
-        <FontAwesomeIcon icon="coffee" />
-        Your <FontAwesomeIcon icon="award" /> is hot!
+export default function Home() {
+  return (
+    <div className="backgroundContainer">
+      <div className="lineContainer">
+        <img alt='logo' src={logoBackground} />
+        <p>
+          monitore os seus animes<br />
+          preferidos, e nao perca mais<br />
+          nenhum episódio
+        </p>
+        <img className='arrow' alt='arrow' src={arrow}/>
       </div>
-    )
+    </div>
+  )
 }

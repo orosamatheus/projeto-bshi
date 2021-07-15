@@ -1,17 +1,21 @@
 import{
-    BrowserRouter as Router,
     Switch,
     Route
 } from 'react-router-dom';
 
 import Home from './pages/Home';
 
+
+function Rota({path, component}){
+    return(
+        <Route path = {path} component={component}/>
+    )
+}
+
 export function Routes(){
     return(
-        <Router>
             <Switch>
-                <Route path="/" component={Home}/>
+                <Rota path="/" component={Home}/>
             </Switch>
-        </Router>
     )
 }
