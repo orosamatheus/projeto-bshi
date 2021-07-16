@@ -1,7 +1,7 @@
 
 div{
     &.contentContainer{
-        height: 200vh;
+        height: 250vh;
         width: 100vw;
     }
     &.backgroundContainer{
@@ -76,10 +76,12 @@ div{
             text-transform: uppercase;
             color: #000000;
             margin-top: 8rem;
+            margin-bottom: 8rem;
 
             @media(min-width: 320px) and (max-width: 610px){
                 font-size: 1rem;
                 margin-top: 4rem;
+                margin-bottom: 4rem;
             }
         }
     }
@@ -88,34 +90,68 @@ div{
         align-items: center;
         justify-content: center;
 
+        @media(min-width: 320px) and (max-width: 610px){
+            flex-direction: column;
+        }
         div{
+            
             &.option1{
                 display: flex;
                 align-items: center;
-                img{
-                    width: 54px;
-                    height: 54px;
+                flex-direction: column;
+                margin-right: 8.5rem;
+                @media(min-width: 320px) and (max-width:610px){
+                    margin: 0 0 5rem 0px; 
+                    flex-direction: row;
+
+                    img{
+                        margin-right: 52px;
+                        width: 54px;
+                        height: 54px;
                     }
+                }
+
             }
             &.option2{
                 display: flex;
                 align-items: center;
-                flex-direction: row-reverse;
-                img{
-                    width: 54px;
-                    height: 54px;
+                flex-direction: column;
+                margin-right: 8.5rem;
+
+                @media(min-width: 320px) and (max-width: 610px){
+                    margin: 0 0 5rem 0px; 
+                    flex-direction: row-reverse;
+
+                    img{
+                        margin-left: 66px;
+                        width: 54px;
+                        height: 54px;
+                    }
                 }
             }
             &.option3{
-                img{
-                    width: 84px;
-                    height: 78px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                @media(min-width: 320px) and (max-width: 610px){
+                    margin-bottom: 5rem;
+
+                    p{
+                        text-align: center;
+                    }
+                    
+                    img{
+                        width: 84px;
+                        height: 78px;
+                    }
                 }
+
             }
         }
         
         p{
-            font-family: Roboto;
+            font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
             font-size: 1.5rem;
@@ -130,7 +166,7 @@ div{
 
             @media(min-width: 320px) and (max-width: 610px){
                 font-size: 1rem;
-                text-align: left
+                text-align: left;
             }
         }
     }
