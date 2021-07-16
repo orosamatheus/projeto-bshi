@@ -100,6 +100,7 @@ div{
                 align-items: center;
                 flex-direction: column;
                 margin-right: 8.5rem;
+                
                 @media(min-width: 320px) and (max-width:610px){
                     margin: 0 0 5rem 0px; 
                     flex-direction: row;
@@ -159,7 +160,7 @@ div{
             text-align: center;
             letter-spacing: 0.125em;
             color: #000000;
-
+            margin-top: 2rem;
             span{
                 font-weight: 700;
             }
@@ -168,6 +169,30 @@ div{
                 font-size: 1rem;
                 text-align: left;
             }
+        }
+    }
+    &.listAnimes{
+        display: flex;
+        align-items: center;
+        margin-top: 8rem;
+        margin-left: 3rem;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: #585858;
+
+        img{
+            margin-right: 1.5rem;
+            width: 31px;
+            height: 18px; 
+        }
+
+        @media(min-width: 320px) and (max-width: 610px){
+            justify-content: center;
+            margin-top: 4rem;
+            margin-left: 0px;
         }
     }
 

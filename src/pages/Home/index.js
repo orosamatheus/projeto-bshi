@@ -10,13 +10,14 @@ import infinite from "../../assets/infinite.svg"
 
 
 export default function Home() {
-  const [anime, setAnime] = useState([])
+  const [animes, setAnime] = useState([])
 
   useEffect(() => {
-    api.get('anime/list/recent').then(response => setAnime(response.data.data))
+ 
+    api.get('anime/list/recent?limit=10').then(response => setAnime(response.data.data))
 
   }, [])
-  console.log(anime)
+  console.log(animes)
 
   return (
     <div className="contentContainer">
@@ -67,6 +68,21 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <div className="listAnimes">
+        <img alt='ico' src={infinite}/>
+        <h3>Veja Animes</h3>
+      </div>
+      <ul className="Animes">
+        {
+          animes.map((anime) =>(
+            
+            <li key ={anime.vid_id}>
+              <img alt='cover' src={anime.cover}/>
+              <a href='/details'>Nome: {anime.title} </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   )
 }
