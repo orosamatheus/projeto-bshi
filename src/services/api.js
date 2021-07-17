@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'https://simpleanime.p.rapidapi.com/',  headers: {
-    'x-rapidapi-key': process.env.REACT_APP_API_KEY,
-    'x-rapidapi-host': 'simpleanime.p.rapidapi.com'
-  } });
+const api = axios.create({ baseURL: 'https://api.jikan.moe/v3/'});
 
 export default api;
