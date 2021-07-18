@@ -1,21 +1,25 @@
-import{
+import {
     Switch,
-    Route
+    Route,
+    BrowserRouter as Router
 } from 'react-router-dom';
 
+
 import Home from './pages/Home';
+import Details from './pages/Details';
 
 
-function Rota({path, component}){
-    return(
-        <Route path = {path} component={component}/>
-    )
-}
 
-export function Routes(){
-    return(
+export function Routes() {
+
+    
+
+    return (
+        <Router>
             <Switch>
-                <Rota path="/" component={Home}/>
+                <Route exact path="/" component={Home} />
+                <Route path={`/details/:id`} component={Details} />
             </Switch>
+        </Router>
     )
 }

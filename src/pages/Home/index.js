@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext } from 'react'
 import "./styles.scss"
 
 import Footer from "../../components/Footer"
@@ -10,24 +10,14 @@ import fire from "../../assets/fire.svg"
 import infinite from "../../assets/infinite.svg"
 import seta from '../../assets/seta.svg'
 
+import { Context } from "../../context/AnimeDetailContext"
+
+import { Link } from 'react-router-dom'
+
 
 export default function Home() {
 
-  const [animes, setAnimes] = useState([]);
-
-  const getAnimes = async () => {
-    const data = await fetch(
-      `https://api.jikan.moe/v3/top/anime/1/bypopularity`
-    ).then((response) => response.json());
-
-    setAnimes(data.top.slice(0, 7));
-  };
-
-  useEffect(() => {
-    getAnimes();
-  }, []);
-
-  console.log(animes)
+  const {animes} = useContext(Context)
 
 
 
@@ -96,7 +86,7 @@ export default function Home() {
                   <h3>Episódios: {anime.episodes}</h3>
                   <h3>Estrelas: **</h3>
                 </div>
-                <img className='seta' alt='seta' src={seta}/>
+                <Link to={`/details/${anime.mal_id}`}><img className='seta' alt='seta' src={seta}/></Link>
             </li>
           ))
         }

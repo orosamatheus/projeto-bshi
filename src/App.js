@@ -1,19 +1,16 @@
 import { Routes } from './routes';
-import { BrowserRouter as Router } from 'react-router-dom';
+
 
 import Header from './components/Header'
-
+import { AnimeDetailProvider } from "./context/AnimeDetailContext"
 
 
 function App() {
   return (
-    <>
-      <Router>
-        <Header/>
+      <AnimeDetailProvider>
+        <Header />
         <Routes />
-      </Router>
-    </>
-
+      </AnimeDetailProvider>
   );
 }
 
