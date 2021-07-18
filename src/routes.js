@@ -13,12 +13,12 @@ import Details from './pages/Details';
 export function Routes() {
 
     return (
-        <Router>
+        
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path={`/details/:id`} component={Details} />
             </Switch>
-        </Router>
+      
     )
 }
 
