@@ -12,8 +12,6 @@ import Details from './pages/Details';
 
 export function Routes() {
 
-    
-
     return (
         <Router>
             <Switch>
