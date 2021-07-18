@@ -1,8 +1,7 @@
 import {
     Switch,
     Route,
-    BrowserRouter as Router,
-    Redirect
+    BrowserRouter as Router
 } from 'react-router-dom';
 
 
@@ -16,10 +15,10 @@ export function Routes() {
     return (
         <Router>
             <Switch>
-                <Redirect exact from="/" to ="/home"/>
-                <Route exact path="/home" component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route path={`/details/:id`} component={Details} />
             </Switch>
         </Router>
     )
 }
+

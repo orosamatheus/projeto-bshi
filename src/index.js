@@ -5,6 +5,7 @@ import './styles/GlobalStyles.scss';
 
 
 ReactDOM.render(
+  
   <React.StrictMode>
     <App />
   </React.StrictMode>,
