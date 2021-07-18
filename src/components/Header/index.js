@@ -3,7 +3,7 @@ import './styles.scss'
 
 export default function Header() {
     return (
-        <header>
+        <header className='header'>
             <div>
                 <img alt='logo' src={logo} />
             </div>
