@@ -15,8 +15,8 @@ export function Routes() {
     return (
         <Router>
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path={`/details/:id`} component={Details} />
+                <Route exact path="https://orosamatheus.github.io/projeto-bshi/" component={Home} />
+                <Route path={`https://orosamatheus.github.io/projeto-bshi/details/:id`} component={Details} />
             </Switch>
         </Router>
     )
