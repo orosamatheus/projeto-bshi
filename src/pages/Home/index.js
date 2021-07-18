@@ -8,6 +8,7 @@ import logoBackground from "../../assets/logoBackground.svg"
 import dragon from "../../assets/dragon.svg"
 import fire from "../../assets/fire.svg"
 import infinite from "../../assets/infinite.svg"
+import seta from '../../assets/seta.svg'
 
 
 export default function Home() {
@@ -89,12 +90,13 @@ export default function Home() {
           animes.map((anime) => (
 
             <li key={anime.mal_id}>
-              <img alt='cover' src={anime.image_url} />
-                <a href='/details'>Nome: {anime.title} </a>
+              <img className='animeCover' alt='cover' src={anime.image_url} />
+                <h3>Nome: {anime.title} </h3>
                 <div className='lineContainer'>
-                  <span>Episódios: {anime.episodes}</span>
-                  <span>Estrelas: **</span>
+                  <h3>Episódios: {anime.episodes}</h3>
+                  <h3>Estrelas: **</h3>
                 </div>
+                <img className='seta' alt='seta' src={seta}/>
             </li>
           ))
         }
