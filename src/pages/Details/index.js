@@ -8,7 +8,7 @@ import './styles.scss'
 export default function Details() {
     let { id } = useParams();
     const [anime, setAnime] = useState({});
-
+    window.scrollTo(0, 0)
     useEffect(() => {
 
         async function getAnime() {
@@ -17,6 +17,7 @@ export default function Details() {
             ).then((res) => res.json());
 
             setAnime(data);
+            
 
         }
         getAnime()
